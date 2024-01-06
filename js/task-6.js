@@ -12,7 +12,7 @@ function createBoxes(amount) {
     div.style.width = `${30 + i * 10}px`;
     div.style.height = `${30 + i * 10}px`;
     div.style.background = getRandomHexColor();
-    document.querySelector('#boxes').appendChild(div);
+    boxes.appendChild(div);
     }
   }
 }
@@ -21,6 +21,7 @@ function destroyBoxes() {
   boxes.innerHTML = ''
 }
 
+const boxes = document.querySelector('#boxes');
 const controls = document.querySelector('#controls');
 const createButton = controls.querySelector('[data-create]');
 const destroyButton = controls.querySelector('[data-destroy]');
